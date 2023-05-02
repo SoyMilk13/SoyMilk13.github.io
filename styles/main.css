@@ -1,0 +1,274 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+#changelog {
+    z-index: 10;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 40%;
+    height: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid darkorange;
+    border-radius: 5px;
+    background-color: orange;
+    font-family: 'Mukta Vaani', sans-serif;
+}
+
+#changelogTitle {
+    margin: 1%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#closeChangelog {
+    position: absolute;
+    top: 0;
+    right: 1%;
+    font-family: inherit;
+    font-weight: bold;
+}
+
+#changelogContent {
+    display: block;
+    word-wrap: break-word;
+    overflow-y: auto;
+}
+
+@font-face {
+    font-family: 'Mukta Vaani';
+    src: url('https://soymilk13.github.io/fruit-fighters/font/MuktaVaani-Regular.ttf') format('truetype');
+}
+
+#almanac {
+    z-index: 10;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 40%;
+    height: 50%;
+    transform: translate(-50%, -50%);
+    overflow-x: hidden;
+    overflow-y: auto;
+    border: 2px solid darkorange;
+    border-radius: 5px;
+    background-color: orange;
+    font-family: 'Mukta Vaani', sans-serif;
+}
+
+#almanacNav {
+    list-style-type: none;
+    background-color: rgb(237, 154, 0);
+    width: 100%;
+}
+
+.almanacTab:first-child {
+    padding-left: 1%;
+}
+
+.almanacTab:last-child {
+    padding-right: 1%;
+}
+
+.almanacTab {
+    display: inline;
+    background-color: rgb(255, 184, 51);
+    border: 2px solid black;
+    border-bottom: none;
+    border-top: none;
+    padding-top: 1%;
+    padding-left: 1%;
+    padding-right: 1%;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+.activeAlmanacTab {
+    background-color: orange;
+}
+
+#closeAlmanac {
+    position: absolute;
+    top: 0;
+    right: 1%;
+    font-family: inherit;
+    font-weight: bold;
+}
+
+#fruitsTab {
+    position: relative;
+}
+
+#fruitsTab:hover .dropdownContentFruits {
+    display: block;
+}
+
+#vegetablesTab {
+    position: relative;
+}
+
+#vegetablesTab:hover .dropdownContentVegetables {
+    display: block;
+}
+
+#obstaclesTab {
+    position: relative;
+}
+
+#obstaclesTab:hover .dropdownContentObstacles {
+    display: block;
+}
+
+.dropdownContentFruits {
+    display: none;
+    position: absolute;
+    bottom: -135px;
+    left: -2px;
+    background-color: rgb(255, 184, 51);
+    padding-left: 1%;
+    padding-right: 1%;
+    border: 2px solid black;
+    border-bottom: none;
+    border-top: none;
+}
+
+.dropdownContentVegetables {
+    display: none;
+    position: absolute;
+    bottom: -54px;
+    left: -2px;
+    background-color: rgb(255, 184, 51);
+    padding-left: 1%;
+    padding-right: 1%;
+    border: 2px solid black;
+    border-bottom: none;
+    border-top: none;
+}
+
+.dropdownContentObstacles {
+    display: none;
+    position: absolute;
+    bottom: -27px;
+    left: -2px;
+    background-color: rgb(255, 184, 51);
+    padding-left: 1%;
+    padding-right: 1%;
+    border: 2px solid black;
+    border-bottom: none;
+    border-top: none;
+}
+
+.dropdownContentFruits p,
+.dropdownContentVegetables p,
+.dropdownContentObstacles p {
+    white-space: nowrap;
+}
+
+.mainButtons {
+    margin: 5px;
+    padding: 5px 15px;
+    border: 3px solid darkblue;
+    border-radius: 5px;
+    background-color: blue;
+    color: white;
+    font-family: 'Mukta Vaani', sans-serif;
+    font-size: 15px;
+}
+
+.mainButtons:hover {
+    transition-duration: 0.2s;
+    background-color: rgb(0, 0, 230);
+}
+
+#mainButtons {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+#options {
+    z-index: 10;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 40%;
+    height: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid darkorange;
+    border-radius: 5px;
+    background-color: orange;
+    font-family: 'Mukta Vaani', sans-serif;
+}
+
+#optionsTitle {
+    margin: 1%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#closeOptions {
+    position: absolute;
+    top: 0;
+    right: 1%;
+    font-family: inherit;
+    font-weight: bold;
+}
+
+#selectGameMode {
+    z-index: 10;
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    width: 30%;
+    height: 40%;
+    transform: translate(-50%);
+    border: 2px solid darkorange;
+    border-radius: 5px;
+    background-color: orange;
+    font-family: 'Mukta Vaani', sans-serif;
+}
+
+#selectGameModeTitle {
+    margin: 5px;
+    margin-top: 10px;
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Mukta Vaani', sans-serif;
+}
+
+.gameModeButton {
+    margin: 5px;
+    padding: 5px 15px;
+    border: 3px solid darkblue;
+    border-radius: 5px;
+    background-color: blue;
+    color: white;
+    font-family: 'Mukta Vaani', sans-serif;
+    font-size: 15px;
+}
+
+.gameModeButton:hover {
+    transition-duration: 0.2s;
+    background-color: rgb(0, 0, 230);
+}
+
+#gameModeButtons {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
