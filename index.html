@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8" />
+        <title>Food Fighters</title>
+        <link href="styles/main.css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Mukta+Vaani" rel="stylesheet" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css" rel="stylesheet" />
+        <script src="scripts/phaser.min.js"></script>
+    </head>
+    <body>
+        <div id="options" style="display: none">
+            <p id="closeOptions" onclick="toggleOptions(0)">X</p>
+            <p id="optionsTitle">Options</p>
+            <div id="mainButtons">
+                <button id="viewChangelogButton" class="mainButtons" onclick="toggleChangelog(1)">View Changelog</button>
+                <button id="viewAlmanacButton" class="mainButtons" onclick="toggleAlmanac(1)">Almanac</button>
+            </div>
+        </div>
+        <div id="changelog" style="display: none">
+            <p id="closeChangelog" onclick="toggleChangelog(0)">X</p>
+            <div id="changelogTitleBox">
+                <p id="changelogTitle">Changelog</p>
+            </div>
+            <div id="changelogContent"></div>
+        </div>
+        <div id="almanac" style="display: none">
+            <div id="almanacTop">
+                <p id="closeAlmanac" onclick="toggleAlmanac(0)">X</p>
+                <ul id="almanacNav">
+                    <li id="fruitsTab" class="almanacTab">Fruits
+                        <i class="fa fa-caret-down"></i>
+                        <div class="dropdownContentFruits">
+                            <p id="orangeTab" onclick="changeAlmanacTab(0)">Orange</p>
+                            <p id="watermelonTab" onclick="changeAlmanacTab(1)">Watermelon</p>
+                            <p id="strawberryTab" onclick="changeAlmanacTab(2)">Strawberry</p>
+                            <p id="pepperTab" onclick="changeAlmanacTab(3)">Pepper</p>
+                            <p id="frozenMelonTab" onclick="changeAlmanacTab(4)">Frozen Watermelon</p>
+                        </div>
+                    </li>
+                    <li id="vegetablesTab" class="almanacTab">Vegetables
+                        <i class="fa fa-caret-down"></i>
+                        <div class="dropdownContentVegetables">
+                            <p id="carrotTab" onclick="changeAlmanacTab(5)">Carrot</p>
+                            <p id="tomatoTab" onclick="changeAlmanacTab(6)">Tomato</p>
+                        </div>
+                    </li>
+                    <li id="obstaclesTab" class="almanacTab">Obstacles
+                        <i class="fa fa-caret-down"></i>
+                        <div class="dropdownContentObstacles">
+                            <p id="bombTab" onclick="changeAlmanacTab(7)">Bomb</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div id="almanacContentOrange" class="almanacContent"></div>
+            <div id="almanacContentWatermelon" class="almanacContent" style="display: none"></div>
+            <div id="almanacContentStrawberry" class="almanacContent" style="display: none"></div>
+            <div id="almanacContentPepper" class="almanacContent" style="display: none"></div>
+            <div id="almanacContentBomb" class="almanacContent" style="display: none"></div>
+            <div id="almanacContentFrozenWatermelon" class="almanacContent" style="display: none"></div>
+            <div id="almanacContentCarrot" class="almanacContent" style="display: none"></div>
+            <div id="almanacContentTomato" class="almanacContent" style="display: none"></div>
+        </div>
+        <div id="selectGameMode" style="display: none">
+            <p id="selectGameModeTitle">Select a game mode:</p>
+            <div id="gameModeButtons">
+                <button id="gameModeClassic" class="gameModeButton" onclick="startGame(0)">Classic</button>
+                <button id="gameModeSurvival" class="gameModeButton" onclick="startGame(1)">Survival</button>
+            </div>
+        </div>
+        <script src="scripts/game.js"></script>
+        <script src="scripts/library.js"></script>
+        <script src="scripts/info.js"></script>
+    </body>
+</html>
