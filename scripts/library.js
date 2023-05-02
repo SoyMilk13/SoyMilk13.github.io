@@ -1,4 +1,4 @@
-var version = '1.0.3 (Beta)';
+var version = '1.1.1 (Beta)';
 
 class ChangelogSection {
     constructor(header, updateItem1, updateItem2, updateItem3) {

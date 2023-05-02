@@ -1,8 +1,8 @@
-new ChangelogSection('Version 1.0.3 (Beta) Patch Notes:', 'Added additional spawns during the "Infinite" wave of Survival mode.', 'Fixed bug where bombs showed up larger than normal.', 'Fixed bug where Frozen Watermelons and Peppers would not spawn during the "Infinite" wave of Survival mode.');
-new ChangelogSection('Version 1.0.2 (Beta) Release Notes:', 'Added a "Survival" mode.', 'Decreased bomb spawn rate. (33% -> 25%)', 'Added "Carrots" and "Tomatoes."');
-new ChangelogSection('Version 1.0 (Beta) Release Notes:', 'Renamed Fruit Fighters to Food Fighters.', 'Fixed bug where food would spawn stuck to the bottom of the page.', 'Optomized code for future updates.');
+new ChangelogSection('Version 1.1.1 (Beta) Patch Notes:', 'Added additional spawns during the "Infinite" wave of Survival mode.', 'Fixed bug where bombs showed up larger than normal.', 'Fixed bug where Frozen Watermelons and Peppers would not spawn during the "Infinite" wave of Survival mode.');
+new ChangelogSection('Version 1.1.0 (Beta) Release Notes:', 'Added a "Survival" mode.', 'Decreased bomb spawn rate. (33% -> 25%)', 'Added "Carrots" and "Tomatoes."');
+new ChangelogSection('Version 1.0.0 (Beta) Release Notes:', 'Renamed Fruit Fighters to Food Fighters.', 'Fixed bug where food would spawn stuck to the bottom of the page.', 'Optomized code for future updates.');
 
-new Announcement('Version 1.0.2 (Beta) Update:', `Introducing "Survival" mode! In this new adventure, you'll have to survive different waves of foods. For now, this only includes "Fruits" and "Vegetables;" however, in the future, more waves and types of foods will be added.`);
+new Announcement('Version 1.1.0 (Beta) Update:', `Introducing "Survival" mode! In this new adventure, you'll have to survive different waves of foods. For now, this only includes "Fruits" and "Vegetables;" however, in the future, more waves and types of foods will be added.`);
 
 new Version;
 
