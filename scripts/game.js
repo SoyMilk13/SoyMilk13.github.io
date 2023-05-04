@@ -294,6 +294,7 @@ function initFood(value) {
     let pepper = (wave == '1-fruit' || wave == 'infinite') ? (frozenMelon) ? false : genRandomNumber(1, 20) == 20 : false;
     let bomb = (pepper) ? false : genRandomNumber(1, 4) == 4;
     let specialFood = (frozenMelon || pepper || bomb) ? true : false;
+    let smallFood = (specialFood) ? false : (foodType == 'tomato' || foodType == 'strawberry') ? true : false;
     let right = genRandomNumber(1, 2) == 2;
     let gravityX = genRandomNumber(5, 12);
     let rightSideSpawn = genRandomNumber(1, 2) == 1;
@@ -324,7 +325,8 @@ function initFood(value) {
             initDoubleTime();
         }
         if (!bomb && !paused) {
-            score += (doubleTime) ? 20 : 10;
+            let foodValue = (smallFood) ? genRandomNumber(10, 12) : genRandomNumber(7, 9);
+            score += (doubleTime) ? (foodValue * 2) : foodValue;
             if ((score > highScoreClassic || score > highScoreSurvival) && !newHighScore && !doubleTime) {
                 newHighScoreText.visible = true;
                 newHighScore = true;
