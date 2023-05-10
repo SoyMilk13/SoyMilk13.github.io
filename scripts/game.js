@@ -210,15 +210,14 @@ function startGame(value) {
     startButton.destroy();
 
     // Set game mode
-    (value == 0) ? classicMode = true : survivalMode = true;
+    if (value == 0) classicMode = true; else survivalMode = true;
 
     // Initiate spawning and clock
     spawnFood = setInterval(initFood, spawnInterval);
     clock = setInterval(timer, 1000);
 
     // Initiate checks for bonus spawns
-    (classicMode) ? setInterval(extraSpawns, 1000) : null;
-    (survivalMode) ? setInterval(waveSpawns, 1000) : null;
+    if (classicMode) setInterval(extraSpawns, 1000); else setInterval(waveSpawns, 1000);
 
     // Set the paused state
     paused = false;
@@ -234,13 +233,13 @@ function startGame(value) {
 
     // Show the game UI
     scoreText.visible = true;
-    (survivalMode) ? timeText.visible = false : timeText.visible = true;
+    if (survivalMode) timeText.visible = false; else timeText.visible = true;
     highScoreText.visible = true;
     heart1.visible = true;
     heart2.visible = true;
     heart3.visible = true;
-    (survivalMode) ? waveText.visible = true : waveText.visible = false;
-    (survivalMode) ? waveTimeText.visible = true : waveTimeText.visible = false;
+    if (survivalMode) waveText.visible = true; else waveText.visible = false;
+    if (survivalMode) waveTimeText.visible = true; else waveTimeText.visible = false;
 };
 
 function showOptions() {
@@ -253,7 +252,7 @@ function toggleOptions(value) {
 
 function toggleChangelog(value) {
     document.getElementById('changelog').style.display = (value == 1) ? 'block' : 'none';
-    (value == 1) ? setContentHeight() : null;
+    if (value == 1) setContentHeight();
 };
 
 function setContentHeight() {
@@ -532,49 +531,25 @@ function extraSpawns() {
 
 function waveSpawns() {
     if (wave == '1-fruit' && !paused && !frozenTime) {
-        if (waveTime <= 30) {
-            initFood(1);
-        }
+        if (waveTime <= 30) initFood(1);
     }
     if (wave == '2-vegetables' && !paused && !frozenTime) {
-        if (waveTime <= 45) {
-            initFood(1);
-        }
-        if (waveTime <= 30) {
-            initFood(1);
-        }
-        if (waveTime <= 15) {
-            initFood(1);
-        }
+        if (waveTime <= 45) initFood(1);
+        if (waveTime <= 30) initFood(1);
+        if (waveTime <= 15) initFood(1);
     }
     if (wave == 'infinite' && !paused && !frozenTime) {
         // Add additional bottom spawns
-        if (waveTime >= 15) {
-            initFood(1);
-        }
-        if (waveTime >= 30) {
-            initFood(1);
-        }
-        if (waveTime >= 45) {
-            initFood(1);
-        }
-        if (waveTime >= 60) {
-            initFood(1);
-        }
+        if (waveTime >= 15) initFood(1);
+        if (waveTime >= 30) initFood(1);
+        if (waveTime >= 45) initFood(1);
+        if (waveTime >= 60) initFood(1);
 
         // Add additional side spawns
-        if (waveTime >= 75) {
-            initFood(2);
-        }
-        if (waveTime >= 90) {
-            initFood(2);
-        }
-        if (waveTime >= 105) {
-            initFood(2);
-        }
-        if (waveTime >= 120) {
-            initFood(2);
-        }
+        if (waveTime >= 75) initFood(2);
+        if (waveTime >= 90) initFood(2);
+        if (waveTime >= 105) initFood(2);
+        if (waveTime >= 120) initFood(2);
     }
 };
 (survivalMode) ? setInterval(waveSpawns, 1000) : null;
@@ -621,6 +596,7 @@ window.addEventListener('keydown', (event) => {
             doubleTimeText.visible = false;
             lifeLostText.visible = false;
             newHighScoreText.visible = false;
+            frozenTimeText.visible = false;
 
             // Show "paused" text
             pausedText.visible = true;
@@ -628,20 +604,19 @@ window.addEventListener('keydown', (event) => {
 
             paused = true;
         } else {
-            if (!frozenTime) {
-                game.paused = false;
-            }
+            if (!frozenTime) game.paused = false;
 
             // Re-initiate spawing and clock
             clock = setInterval(timer, 1000);
-            spawnFood = setInterval(initFood, spawnInterval);
+            if (!frozenTime) spawnFood = setInterval(initFood, spawnInterval);
 
             // Hide "paused" text
             pausedText.visible = false;
             pausedInfoText.visible = false;
 
             // Show "double time" text, if applicable
-            (doubleTime) ? doubleTimeText.visible = true : null;
+            if (frozenTime) frozenTimeText.visible = true;
+            if (doubleTime && !frozenTime) doubleTimeText.visible = true;
 
             paused = false;
         }
@@ -658,6 +633,7 @@ window.addEventListener('blur', () => {
     doubleTimeText.visible = false;
     lifeLostText.visible = false;
     newHighScoreText.visible = false;
+    frozenTimeText.visible = false;
 
     // Show "paused" text
     pausedText.visible = true;

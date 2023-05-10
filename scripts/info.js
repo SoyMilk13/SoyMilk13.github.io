@@ -1,9 +1,10 @@
-new ChangelogSection('Version 1.2.0 (Beta) Release Notes:', 'Added dynamic point values; Smaller foods are now worth more points and point values are randomly generated for all foods.', null, null);
-new ChangelogSection('Version 1.1.1 (Beta) Patch Notes:', 'Added additional spawns during the "Infinite" wave of Survival mode.', 'Fixed bug where bombs showed up larger than normal.', 'Fixed bug where Frozen Watermelons and Peppers would not spawn during the "Infinite" wave of Survival mode.');
-new ChangelogSection('Version 1.1.0 (Beta) Release Notes:', 'Added a "Survival" mode.', 'Decreased bomb spawn rate. (33% -> 25%)', 'Added "Carrots" and "Tomatoes."');
-new ChangelogSection('Version 1.0.0 (Beta) Release Notes:', 'Renamed Fruit Fighters to Food Fighters.', 'Fixed bug where food would spawn stuck to the bottom of the page.', 'Optomized code for future updates.');
+new ChangelogSection('Version 1.2.1 Patch Notes:', 'Fixed bug where pausing and unpausing during "frozen time" would break the game.', null, null);
+new ChangelogSection('Version 1.2.0 Release Notes:', 'Added dynamic point values; Smaller foods are now worth more points and point values are randomly generated for all foods.', null, null);
+new ChangelogSection('Version 1.1.1 Patch Notes:', 'Added additional spawns during the "Infinite" wave of Survival mode.', 'Fixed bug where bombs showed up larger than normal.', 'Fixed bug where Frozen Watermelons and Peppers would not spawn during the "Infinite" wave of Survival mode.');
+new ChangelogSection('Version 1.1.0 Release Notes:', 'Added a "Survival" mode.', 'Decreased bomb spawn rate. (33% -> 25%)', 'Added "Carrots" and "Tomatoes."');
+new ChangelogSection('Version 1.0.0 Release Notes:', 'Renamed Fruit Fighters to Food Fighters.', 'Fixed bug where food would spawn stuck to the bottom of the page.', 'Optomized code for future updates.');
 
-new Announcement('Version 1.2.0 (Beta) Update:', 'Introducing dynamic point values! From now on, each type of food will be worth a random amount of points. In addition, smaller foods have the possibility to generate higher values. Check the almanac for more information.');
+new Announcement('Version 1.2.0 Update:', 'Introducing dynamic point values! From now on, each type of food will be worth a random amount of points. In addition, smaller foods have the possibility to generate higher values. Check the almanac for more information.');
 
 new Version;
 
